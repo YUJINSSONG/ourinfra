@@ -11,7 +11,10 @@ import org.springframework.stereotype.Repository;
 public interface HomeMapper {
 	
 	List<Map<String, Object>> selectELCTMST();
+	int deleteELCTMST(int elctId);
 	int insertELCTMST(Map<String, String> map);
-	int updateELCTMST(Map<String, String> map);
+	
+	
+	List<Map<String, Object>> selectMonthUsage();
 }
 

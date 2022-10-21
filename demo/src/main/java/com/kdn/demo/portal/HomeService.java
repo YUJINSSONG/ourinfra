@@ -16,11 +16,19 @@ public class HomeService {
 		return homeMapper.selectELCTMST();
 	}
 	
+	public int deleteELCTMST(int elctId) {
+		return homeMapper.deleteELCTMST(elctId);
+	}
+	
 	public int insertELCTMST(Map<String, String> map) {
 		return homeMapper.insertELCTMST(map);
 	}
 	
-	public int updateELCTMST(Map<String, String> map) {
-		return homeMapper.updateELCTMST(map);
+	
+	
+	
+	public List<Map<String, Object>> selectMonthUsage() {
+		return homeMapper.selectMonthUsage();
 	}
+	
 }

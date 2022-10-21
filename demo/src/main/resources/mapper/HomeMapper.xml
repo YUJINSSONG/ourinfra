@@ -5,16 +5,19 @@
 	<select id="selectELCTMST" resultType="hashMap">
 		select * from elctmst1
 	</select>
+		
+	<delete id="deleteELCTMST" parameterType="integer">
+		delete from elctmst1 
+		where elct_id = #{elct_id} 
+	</delete>
 	
 	<insert id="insertELCTMST" parameterType="hashMap">
 		insert into elctmst1(elct_nm, elct_pwr) 
 		      values (#{ELCT_NM}, #{ELCT_PWR})		
 	</insert>
-	
-	<update id="updateELCTMST" parameterType="hashMap">
-		update elctmst1 set elct_pwr = #{elct_pwr} 
-		where elct_nm = #{elct_nm} 
-	</update>
-	
+		
+	<select id="selectMonthUsage" resultType="hashMap">
+		select * from elctuse1
+	</select>
 	
 </mapper>
