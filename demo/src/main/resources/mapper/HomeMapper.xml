@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.kdn.demo.portal.HomeMapper">
+	
+	<select id="selectELCTMST" resultType="hashMap">
+		select * from elctmst1
+	</select>
+	
+	<insert id="insertELCTMST" parameterType="hashMap">
+		insert into elctmst1(elct_nm, elct_pwr) 
+		      values (#{ELCT_NM}, #{ELCT_PWR})		
+	</insert>
+	
+	<update id="updateELCTMST" parameterType="hashMap">
+		update elctmst1 set elct_pwr = #{elct_pwr} 
+		where elct_nm = #{elct_nm} 
+	</update>
+	
+	
+</mapper>
